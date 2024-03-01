@@ -9,7 +9,7 @@ st.title("Emotion Detector")
 st.page_link(page="./pages/Text Input.py", label="Text to Emotion", icon="💬")
 st.page_link(page="./pages/Audio_Input.py", label="Audio to Emotion", icon="🔉")
 st.page_link(page="./pages/File Input.py", label="File to Emotion", icon="🗃️")
-st.page_link(page="./pages/video_Upload.py", label="video to Emotion", icon="🎥")
+st.page_link(page="./pages/Video_Upload.py", label="video to Emotion", icon="🎥")
 
 # from st_pages import hide_pages, show_pages, Page
 
