@@ -10,7 +10,7 @@ def translate(text: str) -> str:
     return GoogleTranslator(source='auto', target='en').translate(text)
 
 # Set the title of the main page
-st.title("Upload a File to Extract Emotion")
+st.title("Upload a 📂File to Extract Emotion")
 
 # Function to display messages with reversed roles
 def display_message(role, content):

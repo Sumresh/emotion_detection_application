@@ -4,6 +4,7 @@ import requests
 import pandas as pd
 from deep_translator import GoogleTranslator
 from summarize import from_cohere
+from summarize import for_trans
 # from streamlit_lottie import st_lottie
 import nltk
 
@@ -38,9 +39,9 @@ if prompt :=st.chat_input("What is up?", key="user_input1"):
     # display_message("user", prompt)  
 
     # translator = Translator() 
-    output=translate(prompt)
+    output=for_trans(prompt)
     translated_meaning=prompt + " \n " + output
-    translated_meaning= f"Input:  \n{prompt}  \nTranslated to English:  \n{output}"
+    translated_meaning= f"Input:  \n{prompt}"
     display_message("user", translated_meaning)
     model_outputs = classifier(output)
 
@@ -61,4 +62,4 @@ if prompt :=st.chat_input("What is up?", key="user_input1"):
     df_sorted = df.sort_values(by='score', ascending=False)
 
     st.bar_chart(df.set_index('label')['score'], use_container_width=True, color="#87CEEB")
-    display_message('assistant', f"Exlpaination:  \n{from_cohere(output, [result, result1, result2])}")
+    # display_message('assistant', f"Exlpaination:  \n{from_cohere(output, [result, result1, result2])}")
